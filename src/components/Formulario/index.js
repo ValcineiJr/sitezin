@@ -1,14 +1,18 @@
 import { Container } from "./styles";
 
 export default function Formulario() {
+  function handleSubmit(e) {
+    e.preventDefault();
+  }
+
   return (
-    <Container>
+    <Container id="inscrever">
       <div className="header">
         <h2>Inscreva-se</h2>
         <div className="underline"></div>
       </div>
 
-      <div className="form">
+      <form onSubmit={handleSubmit}>
         <div className="row">
           <div className="input ">
             <label>Nome</label>
@@ -46,8 +50,8 @@ export default function Formulario() {
           </div>
         </div>
 
-        <button>Enviar</button>
-      </div>
+        <button type="submit">Enviar</button>
+      </form>
     </Container>
   );
 }
