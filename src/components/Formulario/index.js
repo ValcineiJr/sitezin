@@ -1,4 +1,5 @@
 import { Container } from "./styles";
+import InputMask from "react-input-mask";
 
 export default function Formulario() {
   function handleSubmit(e) {
@@ -40,7 +41,10 @@ export default function Formulario() {
           </div>
           <div id="telefone" className="input ">
             <label>Telefone</label>
-            <input type="number" placeholder="Digite seu telefone" />
+            <InputMask
+              mask="(99)99999-9999"
+              placeholder="Digite seu telefone"
+            />
           </div>
         </div>
         <div className="row">
